@@ -104,6 +104,14 @@
 </head>
 <body>
 
+<script>
+function toggleEventSection() {
+  const el = document.getElementById("eventContent");
+  el.style.display = (el.style.display === "none") ? "block" : "none";
+}
+</script>
+
+
 <nav>
   <a href="#about">브랜드 소개</a>
   <a href="#event">이벤트</a>
@@ -185,11 +193,15 @@
   </p>
 </section>
 
+
 <section id="event">
-  <h2><span style="cursor:pointer;" onclick="toggleEvent()">이벤트</span></h2>
-  <p>🎁 지금 4만원 이상 구매 시 5,000원 쿠폰 증정!<br>
-     스마트스토어에서 바로 만나보세요.</p>
+  <h2 style="cursor:pointer;" onclick="toggleEventSection()">이벤트</h2>
+  <div id="eventContent" style="display:none;">
+    <p>🎁 지금 4만원 이상 구매 시 5,000원 쿠폰 증정!<br>
+       스마트스토어에서 바로 만나보세요.</p>
+  </div>
 </section>
+
 
 <section id="faq">
   <h2>자주 묻는 질문</h2>
