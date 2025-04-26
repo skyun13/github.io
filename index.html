@@ -1,511 +1,77 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-
-<!-- Open Graph (OG) Tags -->
-<meta property="og:title" content="Health & Pet USA - 미국산 비타민 & 반려동물 영양제 전문 스토어" />
-<meta property="og:description" content="미국산 건강기능식품, 키즈용 비타민, 반려견 & 반려묘 영양제를 지금 만나보세요!" />
-<meta property="og:image" content="https://healthpetusa.com/thumbnail.jpg" />
-<meta property="og:url" content="https://healthpetusa.com/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Health & Pet USA" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Health & Pet USA - 미국산 비타민 & 반려동물 영양제 전문 스토어" />
-<meta name="twitter:description" content="건강을 새롭게, 미국이 만든 프리미엄. 비타민과 펫케어를 한번에!" />
-<meta name="twitter:image" content="https://healthpetusa.com/thumbnail.jpg" />
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MHHP2V7VSR"></script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const productPopup = document.getElementById("productPopup");
-  const menuLink = document.querySelector('a[href="index_discounted_linked.html"]');
-
-  if (menuLink && productPopup) {
-    menuLink.addEventListener("click", function(e) {
-      e.preventDefault();
-      productPopup.style.display = "flex";
-  setTimeout(function() {
-    productPopup.style.opacity = 1;
-    productPopup.style.transform = 'scale(1)';
-  }, 50);
-    });
-  }
-
-  const productGoBtn = document.getElementById("productGoBtn");
-  if (productGoBtn) {
-    productGoBtn.addEventListener("click", function() {
-      window.open("products.html", "_blank");
-      productPopup.style.opacity = 0;
-  productPopup.style.transform = 'scale(0.8)';
-  setTimeout(function() { productPopup.style.display = "none"; }, 500);
-    });
-  }
-
-  // 5초 후 자동 팝업 표시
-  setTimeout(function() {
-    productPopup.style.display = "flex";
-  setTimeout(function() {
-    productPopup.style.opacity = 1;
-    productPopup.style.transform = 'scale(1)';
-  }, 50);
-  }, 10000);
-});
-
-function showEventPopup() {
-  document.getElementById('eventPopup').style.display = 'flex';
-}
-
-function closeEventPopup() {
-  document.getElementById('eventPopup').style.display = 'none';
-}
-
-function confirmEventPopup() {
-  window.open('https://smartstore.naver.com/whdejr486', '_blank');
-  closeEventPopup();
-}
-</script>
-
-
-  <meta name="google-site-verification" content="lTXf6pUM3VMV9Aj0pFDTFO5M1yyVlQ9FSOWRtbp4vZM" />
-
-
-  <title>Health & Pet USA - 미국산 비타민 & 반려동물 영양제 전문</title>
-  <meta name="description" content="라이프익스텐션, 나우푸드 등 인기 미국 비타민 & 반려동물 영양제를 만나는 곳! 키즈 비타민, 펫 영양제 전문 쇼핑몰.">
-  <meta name="keywords" content="미국 비타민, 키즈 비타민, 반려동물 영양제, 건강기능식품, 라이프익스텐션, 나우푸드, 솔가, 닥터스베스트, 스마트스토어">
-  <meta property="og:title" content="Health & Pet USA">
-  <meta property="og:description" content="미국산 건강기능식품과 펫 비타민을 한곳에!">
-  <meta property="og:image" content="https://smartstore.naver.com/whdejr486/images/banner.jpg">
-  <meta property="og:url" content="https://smartstore.naver.com/whdejr486">
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Health & Pet USA</title>
-  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Health & Pet USA - 엄선된 미국산 전문 브랜드 건강기능식품 전문몰">
+  <title>Health & Pet USA | 프리미엄 건강기능식품 전문몰</title>
   <style>
-    body {
-      line-height: 1.6;
-    
-      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
-      background: #ffffff;
-      color: #1a2b4c;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
+    body { font-family: 'Poppins', 'Noto Sans KR', sans-serif; margin: 0; background: #f7f9fc; color: #333; }
+    header { background: linear-gradient(135deg, #1e3c72, #2a5298); padding: 60px 20px; text-align: center; color: white; animation: fadeIn 2s ease; }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.4rem; font-weight: 500; text-shadow: 0px 0px 5px rgba(0,0,0,0.2); }
+    .button { margin-top: 20px; display: inline-block; padding: 10px 20px; background: white; color: #2a5298; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+    .button:hover { background: #2a5298; color: white; }
+    .premium-section { background: #ffffff; padding: 50px 20px; text-align: center; animation: fadeIn 3s ease; }
+    .premium-section h2 { font-size: 1.8rem; color: #2a5298; margin-bottom: 10px; }
+    .premium-section p { color: #666; margin-bottom: 40px; }
+    .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1200px; margin: 0 auto; }
+    .card { background: white; border-radius: 20px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); width: 300px; padding: 30px 20px; text-align: center; transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-10px); }
+    .card img { width: 100px; height: 100px; object-fit: contain; margin-bottom: 20px; }
+    .card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; color: #2a2a2a; letter-spacing: 0.5px; }
+    .card p { font-size: 1rem; color: #777; }
+    footer { text-align: center; font-size: 0.8rem; padding: 20px; color: #999; background: #f1f3f6; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
-    header, section {
-      padding: 48px 20px;
-      max-width: 960px;
-      margin: auto;
-      text-align: center;
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; font-weight: 500; }
+      .cards { flex-direction: column; align-items: center; }
     }
-    h1, h2 {
-      color: #002244;
-      font-weight: 800;
-    }
-    nav {
-      background: #003366;
-      padding: 12px 0;
-      text-align: center;
-    }
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      margin: 0 18px;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .image-block img {
-      width: 100%;
-      max-width: 460px;
-      margin: 12px auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .btn {
-      display: inline-block;
-      background-color: #003366;
-      color: #ffffff;
-      padding: 16px 32px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 12px;
-      text-decoration: none;
-      margin-top: 24px;
-    }
-    .btn:hover {
-      background-color: #002244;
-    }
-  
-    @media (max-width: 480px) {
-      h1 { font-size: 2rem; }
-      nav a { font-size: 0.9rem; margin: 0 12px; }
-      .btn { padding: 14px 24px; font-size: 1rem; }
-      .image-label { font-size: 0.8rem; }
-      .tagline { font-size: 0.9rem; }
-    }
-    
-    section p {
-      font-size: 1.05rem;
-      margin-bottom: 1.2rem;
-    }
-    @media (max-width: 480px) {
-      h1 { font-size: 2rem; }
-      nav a { font-size: 0.9rem; margin: 0 12px; }
-      .btn { padding: 14px 24px; font-size: 1rem; }
-      .image-label { font-size: 0.8rem; }
-      .tagline { font-size: 0.9rem; }
-      section {
-        padding: 32px 16px;
-      }
-      section p {
-        font-size: 1rem;
-        padding: 0 8px;
-      }
-    }
-    </style>
-    
-    
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Health & Pet USA</h1>
+    <p>가장 소중한 당신과 반려동물을 위해,<br>세계가 인정한 프리미엄 건강 솔루션을 전합니다.</p>
+    <a href="products.html" class="button">미국산 제품 둘러보기</a>
+  </header>
 
-<style>
-#eventPopup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10000;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  padding: 20px;
-  text-align: center;
-  width: 90%;
-  max-width: 320px;
-}
-#eventPopup h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #00883d;
-}
-#eventPopup p {
-  font-size: 0.95rem;
-  color: #333;
-}
-#eventPopup button {
-  background: #00c73c;
-  color: white;
-  border: none;
-  padding: 8px 18px;
-  margin-top: 14px;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-}
-#popupOverlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 9999;
-}
-</style>
+  <section class="premium-section">
+    <h2>프리미엄 제품 리스트</h2>
+    <p>엄선된 미국산 전문 브랜드.</p>
 
-<div id="popupOverlay"></div>
-<div id="eventPopup">
-  <h3>알림받기 등록 고객님께 드리는 혜택!</h3>
-  <p>5000원 할인쿠폰 선착순 증정</p>
-  <button onclick="confirmEventPopup()"확인</button>
-</div>
+    <div class="cards">
+      <div class="card">
+        <a href="products.html">
+          <img src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cgn/cgn00965/l/148.jpg" alt="일반 비타민">
+        </a>
+        <h3>일반 비타민</h3>
+        <p>건강을 위한 필수 영양소</p>
+      </div>
+      <div class="card">
+        <a href="products.html">
+          <img src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cdl/cdl10700/g/79.jpg" alt="키즈 비타민">
+        </a>
+        <h3>키즈 비타민</h3>
+        <p>아이들의 건강한 성장을 위하여</p>
+      </div>
+      <div class="card">
+        <a href="products.html">
+          <img src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cgn/cgn01054/g/113.jpg" alt="반려견 비타민">
+        </a>
+        <h3>반려견 비타민</h3>
+        <p>소중한 반려견을 위한 영양 케어</p>
+      </div>
+    </div>
+  </section>
 
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const productPopup = document.getElementById("productPopup");
-  const menuLink = document.querySelector('a[href="index_discounted_linked.html"]');
-
-  if (menuLink && productPopup) {
-    menuLink.addEventListener("click", function(e) {
-      e.preventDefault();
-      productPopup.style.display = "flex";
-  setTimeout(function() {
-    productPopup.style.opacity = 1;
-    productPopup.style.transform = 'scale(1)';
-  }, 50);
-    });
-  }
-
-  const productGoBtn = document.getElementById("productGoBtn");
-  if (productGoBtn) {
-    productGoBtn.addEventListener("click", function() {
-      window.open("products.html", "_blank");
-      productPopup.style.opacity = 0;
-  productPopup.style.transform = 'scale(0.8)';
-  setTimeout(function() { productPopup.style.display = "none"; }, 500);
-    });
-  }
-
-  // 5초 후 자동 팝업 표시
-  setTimeout(function() {
-    productPopup.style.display = "flex";
-  setTimeout(function() {
-    productPopup.style.opacity = 1;
-    productPopup.style.transform = 'scale(1)';
-  }, 50);
-  }, 10000);
-});
-
-function showEventPopup() {
-  document.getElementById('eventPopup').style.display = 'flex';
-}
-
-function closeEventPopup() {
-  document.getElementById('eventPopup').style.display = 'none';
-}
-
-function confirmEventPopup() {
-  window.open('https://smartstore.naver.com/whdejr486', '_blank');
-  closeEventPopup();
-}
-</script>
-
-
-
-<nav>
-  <a href="index_discounted_linked.html" target="_blank" rel="noopener noreferrer">제품 보기</a>
-  <a href="#about">브랜드 소개</a>
-  <a href="#event" onclick="showEventPopup(); return false;">이벤트</a>
-  <a href="#faq">FAQ</a>
-</nav>
-
-<header>
-  <h1 style="font-size: 2rem; font-weight: 800; color: #002244;">Health & Pet USA</h1>
-  <p style="font-size: 1rem; font-weight: 800; color: #003366; text-shadow: 1px 1px 2px #aaccff;">미국산 건강기능식품과 반려동물 영양제를 전문적으로 선별하여 제공하는 브랜드 쇼핑몰입니다.</p>
-  <style>
-    .linked-image {
-      position: relative;
-      display: block;
-      margin-bottom: 24px;
-    }
-    .image-label {
-      position: absolute;
-      bottom: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0,0,0,0.6);
-      color: #fff;
-      padding: 6px 16px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      pointer-events: none;
-    }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 2rem; }
-      nav a { font-size: 0.9rem; margin: 0 12px; }
-      .btn { padding: 14px 24px; font-size: 1rem; }
-      .image-label { font-size: 0.8rem; }
-      .tagline { font-size: 0.9rem; }
-    }
-    
-    section p {
-      font-size: 1.05rem;
-      margin-bottom: 1.2rem;
-    }
-    @media (max-width: 480px) {
-      h1 { font-size: 2rem; }
-      nav a { font-size: 0.9rem; margin: 0 12px; }
-      .btn { padding: 14px 24px; font-size: 1rem; }
-      .image-label { font-size: 0.8rem; }
-      .tagline { font-size: 0.9rem; }
-      section {
-        padding: 32px 16px;
-      }
-      section p {
-        font-size: 1rem;
-        padding: 0 8px;
-      }
-    }
-    </style>
-    
-    
-
-
-<div class="image-block">
-  <a href="https://smartstore.naver.com/whdejr486/category/3e8754e1ef2a47e9adcbc8f03e208e59?cp=1" target="_blank" class="linked-image">
-    <img src="images/pet_banner.jpg" alt="반려동물 카테고리" />
-    <div class="image-label">🐾 반려동물 비타민 보기</div>
-  </a>
-  <a href="https://smartstore.naver.com/whdejr486/category/c6ae1b8205934808befa22e4a18d5cf3?cp=1" target="_blank" class="linked-image">
-    <img src="images/couple_vitamin.jpg" alt="비타민 카테고리" />
-    <div class="image-label">🍊 키즈 & 비타민 보기</div>
-  </a>
-</div>
-
-<a href="https://smartstore.naver.com/whdejr486" class="btn" target="_blank">🛒 네이버 쇼핑 바로가기</a>
-</header>
-
-<section id="about">
-  <h2>브랜드 소개</h2>
-  <p>
-    Health & Pet USA는 미국산 건강기능식품과 반려동물 영양제 전문 브랜드로,<br>
-    라이프 익스텐션, 닥터스베스트, 네이처스바운티 등 신뢰받는 제품을 제공합니다.
-  </p>
-</section>
-
-
-
-
-
-
-
-<section id="faq">
-  <h2>자주 묻는 질문</h2>
-  <p><strong>Q. 배송은 얼마나 걸리나요?</strong><br>A. 일반적으로 7~10일 정도 소요됩니다.</p>
-  <p><strong>Q. 반품은 어떻게 하나요?</strong><br>A. 스마트스토어 내 고객센터를 통해 신청 가능합니다.</p>
-</section>
-
-
-
-
-<section id="license" style="background:#f9f9f9; padding:48px 20px;">
-  <h2>공식 사업자 등록 정보</h2>
-  <p>
-    건강기능식품 판매업 영업신고번호:<br>
-<strong>제 2025-0279266 호</strong><br>
-수입식품등 인터넷구매대행업 등록번호:<br>
-<strong>제 25250017237 호</strong>
-  </p>
-</section>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const productPopup = document.getElementById("productPopup");
-  const menuLink = document.querySelector('a[href="index_discounted_linked.html"]');
-
-  if (menuLink && productPopup) {
-    menuLink.addEventListener("click", function(e) {
-      e.preventDefault();
-      productPopup.style.display = "flex";
-  setTimeout(function() {
-    productPopup.style.opacity = 1;
-    productPopup.style.transform = 'scale(1)';
-  }, 50);
-    });
-  }
-
-  const productGoBtn = document.getElementById("productGoBtn");
-  if (productGoBtn) {
-    productGoBtn.addEventListener("click", function() {
-      window.open("products.html", "_blank");
-      productPopup.style.opacity = 0;
-  productPopup.style.transform = 'scale(0.8)';
-  setTimeout(function() { productPopup.style.display = "none"; }, 500);
-    });
-  }
-
-  // 5초 후 자동 팝업 표시
-  setTimeout(function() {
-    productPopup.style.display = "flex";
-  setTimeout(function() {
-    productPopup.style.opacity = 1;
-    productPopup.style.transform = 'scale(1)';
-  }, 50);
-  }, 10000);
-});
-
-function showEventPopup() {
-  document.getElementById('eventPopup').style.display = 'flex';
-}
-
-function closeEventPopup() {
-  document.getElementById('eventPopup').style.display = 'none';
-}
-
-function confirmEventPopup() {
-  window.open('https://smartstore.naver.com/whdejr486', '_blank');
-  closeEventPopup();
-}
-</script>
-
-
-
-<!-- 제품 보기 팝업 -->
-<div id="productPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
-  <div style="background:white; padding:30px 20px; border-radius:12px; text-align:center; max-width:320px; width:80%; margin:auto;">
-    <h2 style="font-size:1.5rem; margin-bottom:10px;">제품 보러 가기</h2>
-    <p style="font-size:1rem; color:#555;">다양한 비타민과 반려동물 영양제를 만나보세요!</p>
-    <button id="productGoBtn" style="margin-top:20px; padding:10px 20px; font-size:1rem; background:#00a859; color:white; border:none; border-radius:8px; cursor:pointer;">제품 보기</button>
-  </div>
-</div>
-
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const productPopup = document.getElementById("productPopup");
-  const menuLink = document.querySelector('a[href="index_discounted_linked.html"]');
-
-  if (menuLink && productPopup) {
-    menuLink.addEventListener("click", function(e) {
-      e.preventDefault();
-      productPopup.style.display = "flex";
-  setTimeout(function() {
-    productPopup.style.opacity = 1;
-    productPopup.style.transform = 'scale(1)';
-  }, 50);
-    });
-  }
-
-  const productGoBtn = document.getElementById("productGoBtn");
-  if (productGoBtn) {
-    productGoBtn.addEventListener("click", function() {
-      window.open("products.html", "_blank");
-      productPopup.style.opacity = 0;
-  productPopup.style.transform = 'scale(0.8)';
-  setTimeout(function() { productPopup.style.display = "none"; }, 500);
-    });
-  }
-
-  // 5초 후 자동 팝업 표시
-  setTimeout(function() {
-    productPopup.style.display = "flex";
-  setTimeout(function() {
-    productPopup.style.opacity = 1;
-    productPopup.style.transform = 'scale(1)';
-  }, 50);
-  }, 10000);
-});
-
-function showEventPopup() {
-  document.getElementById('eventPopup').style.display = 'flex';
-}
-
-function closeEventPopup() {
-  document.getElementById('eventPopup').style.display = 'none';
-}
-
-function confirmEventPopup() {
-  window.open('https://smartstore.naver.com/whdejr486', '_blank');
-  closeEventPopup();
-}
-</script>
-
-
+  <footer>
+    &copy; 2025 Health & Pet USA. All Rights Reserved.
+  </footer>
 </body>
-
-
 </html>
