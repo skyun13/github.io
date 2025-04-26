@@ -2,14 +2,64 @@
 <html lang="ko">
 <head>
 
+<!-- Open Graph (OG) Tags -->
+<meta property="og:title" content="Health & Pet USA - 미국산 비타민 & 반려동물 영양제 전문 스토어" />
+<meta property="og:description" content="미국산 건강기능식품, 키즈용 비타민, 반려견 & 반려묘 영양제를 지금 만나보세요!" />
+<meta property="og:image" content="https://healthpetusa.com/thumbnail.jpg" />
+<meta property="og:url" content="https://healthpetusa.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Health & Pet USA" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Health & Pet USA - 미국산 비타민 & 반려동물 영양제 전문 스토어" />
+<meta name="twitter:description" content="건강을 새롭게, 미국이 만든 프리미엄. 비타민과 펫케어를 한번에!" />
+<meta name="twitter:image" content="https://healthpetusa.com/thumbnail.jpg" />
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHHP2V7VSR"></script>
+
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MHHP2V7VSR');
+document.addEventListener("DOMContentLoaded", function() {
+  const productPopup = document.getElementById("productPopup");
+  const menuLink = document.querySelector('a[href="index_discounted_linked.html"]');
+
+  if (menuLink && productPopup) {
+    menuLink.addEventListener("click", function(e) {
+      e.preventDefault();
+      productPopup.style.display = "flex";
+    });
+  }
+
+  const productGoBtn = document.getElementById("productGoBtn");
+  if (productGoBtn) {
+    productGoBtn.addEventListener("click", function() {
+      window.open("products.html", "_blank");
+      productPopup.style.display = "none";
+    });
+  }
+
+  // 5초 후 자동 팝업 표시
+  setTimeout(function() {
+    productPopup.style.display = "flex";
+  }, 5000);
+});
+
+function showEventPopup() {
+  document.getElementById('eventPopup').style.display = 'flex';
+}
+
+function closeEventPopup() {
+  document.getElementById('eventPopup').style.display = 'none';
+}
+
+function confirmEventPopup() {
+  window.open('https://smartstore.naver.com/whdejr486', '_blank');
+  closeEventPopup();
+}
 </script>
+
 
   <meta name="google-site-verification" content="lTXf6pUM3VMV9Aj0pFDTFO5M1yyVlQ9FSOWRtbp4vZM" />
 
@@ -167,29 +217,56 @@
 <div id="eventPopup">
   <h3>알림받기 등록 고객님께 드리는 혜택!</h3>
   <p>5000원 할인쿠폰 선착순 증정</p>
-  <button onclick="closeEventPopup()">확인</button>
+  <button onclick="confirmEventPopup()"확인</button>
 </div>
 
+
 <script>
-function showEventPopup() {
-  document.getElementById("eventPopup").style.display = "block";
-  document.getElementById("popupOverlay").style.display = "block";
-}
-function closeEventPopup() {
-  window.location.href = "https://smartstore.naver.com/whdejr486";
-}
 document.addEventListener("DOMContentLoaded", function() {
-  const eventLink = document.querySelector('a[href="#event"]');
-  if (eventLink) {
-    eventLink.addEventListener("click", showEventPopup);
+  const productPopup = document.getElementById("productPopup");
+  const menuLink = document.querySelector('a[href="index_discounted_linked.html"]');
+
+  if (menuLink && productPopup) {
+    menuLink.addEventListener("click", function(e) {
+      e.preventDefault();
+      productPopup.style.display = "flex";
+    });
   }
+
+  const productGoBtn = document.getElementById("productGoBtn");
+  if (productGoBtn) {
+    productGoBtn.addEventListener("click", function() {
+      window.open("products.html", "_blank");
+      productPopup.style.display = "none";
+    });
+  }
+
+  // 5초 후 자동 팝업 표시
+  setTimeout(function() {
+    productPopup.style.display = "flex";
+  }, 5000);
 });
+
+function showEventPopup() {
+  document.getElementById('eventPopup').style.display = 'flex';
+}
+
+function closeEventPopup() {
+  document.getElementById('eventPopup').style.display = 'none';
+}
+
+function confirmEventPopup() {
+  window.open('https://smartstore.naver.com/whdejr486', '_blank');
+  closeEventPopup();
+}
 </script>
 
 
+
 <nav>
+  <a href="index_discounted_linked.html" target="_blank" rel="noopener noreferrer">제품 보기</a>
   <a href="#about">브랜드 소개</a>
-  <a href="#event">이벤트</a>
+  <a href="#event" onclick="showEventPopup(); return false;">이벤트</a>
   <a href="#faq">FAQ</a>
 </nav>
 
@@ -270,14 +347,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-<section id="event">
-  <h2>이벤트</h2>
-  <p style="font-size:1rem; color:#333;">
-    🎁 현재 4만원 이상 구매 고객님께<br>
-    <strong style="color:#02c700;">5,000원 할인쿠폰</strong>을 선착순으로 증정해드립니다!<br><br>
-    지금 바로 스마트스토어에서 확인해보세요 💚
-  </p>
-</section>
+
 
 
 
@@ -300,21 +370,100 @@ document.addEventListener("DOMContentLoaded", function() {
   </p>
 </section>
 
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const toggleTitle = document.getElementById("eventTitle");
-  const toggleContent = document.getElementById("eventContent");
-  if (toggleTitle && toggleContent) {
-    toggleTitle.addEventListener("click", function() {
-      if (toggleContent.style.display === "none" || toggleContent.style.display === "") {
-        toggleContent.style.display = "block";
-      } else {
-        toggleContent.style.display = "none";
-      }
+  const productPopup = document.getElementById("productPopup");
+  const menuLink = document.querySelector('a[href="index_discounted_linked.html"]');
+
+  if (menuLink && productPopup) {
+    menuLink.addEventListener("click", function(e) {
+      e.preventDefault();
+      productPopup.style.display = "flex";
     });
   }
+
+  const productGoBtn = document.getElementById("productGoBtn");
+  if (productGoBtn) {
+    productGoBtn.addEventListener("click", function() {
+      window.open("products.html", "_blank");
+      productPopup.style.display = "none";
+    });
+  }
+
+  // 5초 후 자동 팝업 표시
+  setTimeout(function() {
+    productPopup.style.display = "flex";
+  }, 5000);
 });
+
+function showEventPopup() {
+  document.getElementById('eventPopup').style.display = 'flex';
+}
+
+function closeEventPopup() {
+  document.getElementById('eventPopup').style.display = 'none';
+}
+
+function confirmEventPopup() {
+  window.open('https://smartstore.naver.com/whdejr486', '_blank');
+  closeEventPopup();
+}
 </script>
+
+
+
+<!-- 제품 보기 팝업 -->
+<div id="productPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
+  <div style="background:white; padding:30px 20px; border-radius:12px; text-align:center; max-width:320px; width:80%; margin:auto;">
+    <h2 style="font-size:1.5rem; margin-bottom:10px;">제품 보러 가기</h2>
+    <p style="font-size:1rem; color:#555;">다양한 비타민과 반려동물 영양제를 만나보세요!</p>
+    <button id="productGoBtn" style="margin-top:20px; padding:10px 20px; font-size:1rem; background:#00a859; color:white; border:none; border-radius:8px; cursor:pointer;">제품 보기</button>
+  </div>
+</div>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const productPopup = document.getElementById("productPopup");
+  const menuLink = document.querySelector('a[href="index_discounted_linked.html"]');
+
+  if (menuLink && productPopup) {
+    menuLink.addEventListener("click", function(e) {
+      e.preventDefault();
+      productPopup.style.display = "flex";
+    });
+  }
+
+  const productGoBtn = document.getElementById("productGoBtn");
+  if (productGoBtn) {
+    productGoBtn.addEventListener("click", function() {
+      window.open("products.html", "_blank");
+      productPopup.style.display = "none";
+    });
+  }
+
+  // 5초 후 자동 팝업 표시
+  setTimeout(function() {
+    productPopup.style.display = "flex";
+  }, 5000);
+});
+
+function showEventPopup() {
+  document.getElementById('eventPopup').style.display = 'flex';
+}
+
+function closeEventPopup() {
+  document.getElementById('eventPopup').style.display = 'none';
+}
+
+function confirmEventPopup() {
+  window.open('https://smartstore.naver.com/whdejr486', '_blank');
+  closeEventPopup();
+}
+</script>
+
 
 </body>
 
