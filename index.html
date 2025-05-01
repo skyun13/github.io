@@ -84,12 +84,13 @@
 <footer>
     © 2025 Health &amp; Pet USA. All Rights Reserved.
   </footer>
-
 <script>
-  document.getElementById('productBtn').addEventListener('click', function () {
-    setTimeout(function () {
-      window.open("https://smartstore.naver.com/whdejr486", "_blank");
-    }, 2000);
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('productBtn').addEventListener('click', function () {
+      setTimeout(function () {
+        window.open("https://smartstore.naver.com/whdejr486", "_blank");
+      }, 1000);
+    });
   });
 </script></body>
 </html>
