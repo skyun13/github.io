@@ -7,11 +7,10 @@
 <meta content="프리미엄 미국 건강기능식품, 키즈/반려동물 비타민 전문 쇼핑몰 - Health &amp; Pet USA" name="description"/>
 <meta content="미국 비타민, 건강기능식품 직구, 아이허브 대안, 키즈 비타민, 반려동물 영양제, 프리미엄 건강보조제" name="keywords"/>
 <meta content="81b9b7320edcfc17fc12a9185727fe10cd381df0" name="naver-site-verification"/>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 <meta content="Health &amp; Pet USA | 프리미엄 건강기능식품 전문몰" property="og:title"/>
 <meta content="미국 직구 프리미엄 비타민, 키즈 및 반려동물 건강식품까지." property="og:description"/>
-<meta content="https://healthpetusa.com/images/thumbnail.jpg" property="og:image"/>
-<meta content="https://healthpetusa.com/" property="og:url"/>
+<meta content="https://사이트주소/logo.jpg" property="og:image"/>
+<meta content="https://사이트주소/" property="og:url"/>
 <title>미국 건강기능식품 직구 | 프리미엄 비타민 - Health &amp; Pet USA</title>
 <style>
     body { font-family: 'Poppins', 'Noto Sans KR', sans-serif; margin: 0; background: #f7f9fc; color: #333; }
@@ -47,14 +46,9 @@
       Health &amp; Pet USA <img alt="미국 국기" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" style="width: 32px; vertical-align: middle; margin-left: 8px;"/>
 </h1>
 <p>가장 소중한 당신과 반려동물을 위해,<br/>세계가 인정한 프리미엄 건강 솔루션을 전합니다.</p>
-<nav style="margin-top: 30px;">
-<ul style="list-style: none; display: flex; justify-content: center; gap: 30px; padding: 0;">
-<li>
-</li>
-</ul>
-</nav>
-<a class="button" href="products.html" id="productBtn">미국산 제품 둘러보기</a></header>
-<section class="premium-section" id="product-section">
+<a class="button" href="#" id="productBtn">미국산 제품 둘러보기</a>
+</header>
+<section class="premium-section">
 <h2>프리미엄 제품 리스트</h2>
 <p>엄선된 미국산 전문 브랜드.</p>
 <div class="cards">
@@ -81,14 +75,24 @@
 </div>
 </div>
 </section>
+<section class="brand-intro" style="max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center;">
+<h2>브랜드 소개</h2>
+<p>
+      Health &amp; Pet USA는 미국에서 엄선한 프리미엄 건강기능식품을 직구 형태로 제공하는 전문 쇼핑몰입니다.
+      아이허브를 대체할 수 있는 신뢰성 있는 플랫폼으로, 일반 비타민부터 키즈 성장 영양제, 반려동물 전용 보조제까지 폭넓은 라인업을 제공합니다.
+      모든 제품은 정품 인증을 보유하고 있으며, 미국 본토에서 직접 배송됩니다.
+    </p>
+</section>
 <footer>
     © 2025 Health &amp; Pet USA. All Rights Reserved.
   </footer>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('productBtn').addEventListener('click', function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('productBtn').addEventListener('click', function (e) {
+      e.preventDefault(); // 기본 이동 막기
+      window.open("https://smartstore.naver.com/whdejr486", "smartstorePopup", "width=600,height=700,left=100,top=100,resizable=yes,scrollbars=yes");
       setTimeout(function () {
-        window.open("https://smartstore.naver.com/whdejr486", "_blank");
+        window.location.href = "products.html"; // 현재 창에서 이동
       }, 1000);
     });
   });
