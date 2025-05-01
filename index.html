@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -28,6 +29,21 @@
     .card img { width: 100px; height: 100px; object-fit: contain; margin-bottom: 20px; }
     .card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; color: #2a2a2a; letter-spacing: 0.5px; }
     .card p { font-size: 1rem; color: #777; }
+    .popup-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 999;
+    }
+    .popup-content {
+      background: #ffffff; padding: 30px; border-radius: 12px;
+      width: 90%; max-width: 600px; text-align: center; position: relative;
+    }
+    .popup-content h3 { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+    .popup-content p { font-size: 16px; color: #374151; line-height: 1.6; }
+    .close-button {
+      position: absolute; top: 15px; right: 20px; background: #2a5298;
+      color: white; border: none; padding: 6px 12px; border-radius: 4px;
+      cursor: pointer; font-size: 14px;
+    }
     footer { text-align: center; font-size: 0.8rem; padding: 20px; color: #999; background: #f1f3f6; }
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(-20px); }
@@ -46,19 +62,56 @@
       Health & Pet USA <img alt="미국 국기" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" style="width: 32px; vertical-align: middle; margin-left: 8px;"/>
     </h1>
     <p>가장 소중한 당신과 반려동물을 위해,<br/>세계가 인정한 프리미엄 건강 솔루션을 전합니다.</p>
-    <a class="button" href="products.html">미국산 제품 둘러보기</a>
+    
+    
+    
+    <nav style="margin-top: 30px;">
+      <ul style="list-style: none; display: flex; justify-content: center; gap: 30px; padding: 0;">
+        <li>
+          <a href="products.html" style="text-decoration: none; 
+            color: #ffffff; 
+            font-weight: 600; 
+            font-size: 16px; 
+            background: linear-gradient(135deg, #ffd700, #ffa500); 
+            padding: 10px 20px; 
+            border-radius: 30px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+            transition: transform 0.2s;">
+            미국산 제품 둘러보기
+          </a>
+        </li>
+        <li>
+          <a href="#" onclick="document.getElementById('brandPopup').style.display='flex'" style="text-decoration: none; 
+            color: #ffffff; 
+            font-weight: 600; 
+            font-size: 16px; 
+            background: linear-gradient(135deg, #64b5f6, #1e88e5); 
+            padding: 10px 20px; 
+            border-radius: 30px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+            transition: transform 0.2s;">
+            브랜드 소개
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+
   </header>
 
   <section class="premium-section">
     <h2>프리미엄 제품 리스트</h2>
     <p>엄선된 미국산 전문 브랜드.</p>
     <div class="cards">
+      
       <div class="card">
         <a href="products.html">
           <img alt="프리미엄 일반 비타민 제품" src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cgn/cgn00965/l/148.jpg"/>
         </a>
         <h3>일반 비타민</h3>
         <p>건강을 위한 필수 영양소</p>
+        <a class="button" href="https://healthpetusa.com/shop">구매하기</a>
       </div>
       <div class="card">
         <a href="products.html">
@@ -66,6 +119,7 @@
         </a>
         <h3>키즈 비타민</h3>
         <p>아이들의 건강한 성장을 위하여</p>
+        <a class="button" href="https://healthpetusa.com/shop">구매하기</a>
       </div>
       <div class="card">
         <a href="products.html">
@@ -73,18 +127,23 @@
         </a>
         <h3>반려견 비타민</h3>
         <p>소중한 반려견을 위한 영양 케어</p>
+        <a class="button" href="https://healthpetusa.com/shop">구매하기</a>
       </div>
+    
     </div>
   </section>
 
-  <section class="brand-intro" style="max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center;">
-    <h2>브랜드 소개</h2>
-    <p>
-      Health & Pet USA는 미국에서 엄선한 프리미엄 건강기능식품을 직구 형태로 제공하는 전문 쇼핑몰입니다.
-      아이허브를 대체할 수 있는 신뢰성 있는 플랫폼으로, 일반 비타민부터 키즈 성장 영양제, 반려동물 전용 보조제까지 폭넓은 라인업을 제공합니다.
-      모든 제품은 정품 인증을 보유하고 있으며, 미국 본토에서 직접 배송됩니다.
-    </p>
-  </section>
+  <div class="popup-overlay" id="brandPopup">
+    <div class="popup-content">
+      <button class="close-button" onclick="document.getElementById('brandPopup').style.display='none'">닫기</button>
+      <h3>브랜드 소개</h3>
+      <p>
+        Health & Pet USA는 미국에서 직접 엄선한 프리미엄 건강기능식품을 쉽고 편하게 만나볼 수 있는 직구 전문 쇼핑몰입니다.
+        일반 비타민부터 어린이 성장 영양제, 반려동물 전용 보조제까지 다양한 제품을 한 곳에서 제공합니다.
+        모든 제품은 정품 인증을 받은 믿을 수 있는 상품들로, 미국 본사에서 바로 배송됩니다.
+      </p>
+    </div>
+  </div>
 
   <footer>
     © 2025 Health & Pet USA. All Rights Reserved.
