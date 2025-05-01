@@ -50,12 +50,11 @@
 <nav style="margin-top: 30px;">
 <ul style="list-style: none; display: flex; justify-content: center; gap: 30px; padding: 0;">
 <li>
-
 </li>
 </ul>
 </nav>
-<a class="button" href="products.html">미국산 제품 둘러보기</a></header>
-<section class="premium-section">
+<a class="button" href="products.html" id="productBtn">미국산 제품 둘러보기</a></header>
+<section class="premium-section" id="product-section">
 <h2>프리미엄 제품 리스트</h2>
 <p>엄선된 미국산 전문 브랜드.</p>
 <div class="cards">
@@ -85,26 +84,12 @@
 <footer>
     © 2025 Health &amp; Pet USA. All Rights Reserved.
   </footer>
-<div class="popup-overlay" id="brandPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 999;">
-<div class="popup-content" style="background: #ffffff; padding: 30px; border-radius: 12px;
-    width: 90%; max-width: 600px; text-align: center; position: relative;">
-<button class="close-button" onclick="document.getElementById('brandPopup').style.display='none'" style="position: absolute; top: 15px; right: 20px; background: #2a5298;
-      color: white; border: none; padding: 6px 12px; border-radius: 4px;
-      cursor: pointer; font-size: 14px;">닫기</button>
-<h3>브랜드 소개</h3>
-<p style="font-size: 16px; color: #374151; line-height: 1.6;">
-      Health &amp; Pet USA는 미국에서 직접 엄선한 프리미엄 건강기능식품을 쉽고 편하게 만나볼 수 있는 직구 전문 쇼핑몰입니다.
-      일반 비타민부터 어린이 성장 영양제, 반려동물 전용 보조제까지 다양한 제품을 한 곳에서 제공합니다.
-      모든 제품은 정품 인증을 받은 믿을 수 있는 상품들로, 미국 본사에서 바로 배송됩니다.
-    </p>
-</div>
-</div>
+
 <script>
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      document.getElementById('brandPopup').style.display = 'flex';
-    }, 3000);
+  document.getElementById('productBtn').addEventListener('click', function () {
+    setTimeout(function () {
+      window.open("https://smartstore.naver.com/whdejr486", "_blank");
+    }, 2000);
   });
 </script></body>
 </html>
