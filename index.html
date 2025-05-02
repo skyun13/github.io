@@ -39,15 +39,6 @@
       .cards { flex-direction: column; align-items: center; }
     }
   </style>
-
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MHHP2V7VSR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-MHHP2V7VSR');
-</script>
 </head>
 <body>
 <header>
@@ -112,5 +103,19 @@
       }, 1000);
     });
   });
-</script></body>
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let userInteracted = false;
+    ['click', 'keydown', 'scroll', 'touchstart'].forEach(evt =>
+      window.addEventListener(evt, () => userInteracted = true)
+    );
+    setTimeout(() => {
+      if (!userInteracted) {
+        window.location.href = "https://smartstore.naver.com/whdejr486?utm_source=homepage&utm_medium=timeout&utm_campaign=autoredirect";
+      }
+    }, 4000);
+  });
+</script>
+</body>
 </html>
