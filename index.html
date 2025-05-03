@@ -102,19 +102,24 @@
 <footer>
     © 2025 Health &amp; Pet USA. All Rights Reserved.
   </footer>
+
+
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById('productBtn').addEventListener('click', function (e) {
-      e.preventDefault(); // 기본 이동 막기
-      window.open("https://smartstore.naver.com/whdejr486", "smartstorePopup", "width=800,height=900,left=100,top=100,resizable=yes,scrollbars=yes");
-      setTimeout(function () {
-        window.location.href = "products.html"; // 현재 창에서 이동
-      }, 1000);
-    });
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
+    // 버튼 클릭 → 스마트스토어 팝업 + 본 페이지 이동
+    const btn = document.getElementById('productBtn');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.open("https://smartstore.naver.com/whdejr486", "smartstorePopup", "width=800,height=900,left=100,top=100,resizable=yes,scrollbars=yes");
+        setTimeout(function () {
+          window.location.href = "products.html";
+        }, 1000);
+      });
+    }
+
+    // 자동 이동 (4초 비활동 시 스마트스토어로 이동)
     let userInteracted = false;
     ['click', 'keydown', 'scroll', 'touchstart'].forEach(evt =>
       window.addEventListener(evt, () => userInteracted = true)
@@ -123,8 +128,9 @@
       if (!userInteracted) {
         window.location.href = "https://smartstore.naver.com/whdejr486?utm_source=homepage&utm_medium=timeout&utm_campaign=autoredirect";
       }
-    }, 4000);
+    }, 7000);
   });
 </script>
+
 </body>
 </html>
